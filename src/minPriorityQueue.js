@@ -27,7 +27,7 @@ export default class MinPriorityQueue {
         }
 
         const minElInd = this.data.reduce((acc, el, i) => (
-            el[1] > this.data[i][1] ? i : acc
+            this.data[acc][1] > el[1] ? i : acc
         ), 0);
 
         const minEl = this.data[minElInd];
